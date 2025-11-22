@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="pong" width="800" height="500"></canvas>
+
+        <div id="menu-overlay">
+            <h1 class="neon-text">NEON PONG</h1>
+            <div class="difficulty-select">
+                <button class="btn neon-btn" data-diff="0.05">EASY</button>
+                <button class="btn neon-btn active" data-diff="0.1">MEDIUM</button>
+                <button class="btn neon-btn" data-diff="0.2">HARD</button>
+            </div>
+            <button id="start-btn" class="btn neon-btn-primary">START GAME</button>
+        </div>
+
+        <div id="game-over-overlay" class="hidden">
+            <h1 id="winner-text" class="neon-text">PLAYER WINS</h1>
+            <button id="restart-btn" class="btn neon-btn-primary">PLAY AGAIN</button>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
