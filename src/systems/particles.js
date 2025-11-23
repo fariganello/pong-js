@@ -1,4 +1,4 @@
-import { randomRange } from './utils.js';
+import { randomRange } from '../utils/utils.js';
 
 export class Particle {
     constructor(x, y, color, speed, life) {

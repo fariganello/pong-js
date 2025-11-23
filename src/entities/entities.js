@@ -1,4 +1,4 @@
-import { GAME_CONFIG, COLORS, POWERUP_TYPES, CANVAS_WIDTH, CANVAS_HEIGHT } from './constants.js';
+import { GAME_CONFIG, COLORS, POWERUP_TYPES, CANVAS_WIDTH, CANVAS_HEIGHT } from '../utils/constants.js';
 
 export class Ball {
     constructor(x, y, velocityX, velocityY, speed = GAME_CONFIG.BALL_SPEED) {

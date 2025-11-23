@@ -1,5 +1,5 @@
-import { CANVAS_WIDTH, CANVAS_HEIGHT, GAME_CONFIG, POWERUP_TYPES } from './constants.js';
-import { net } from './entities.js';
+import { CANVAS_WIDTH, CANVAS_HEIGHT, GAME_CONFIG, POWERUP_TYPES } from '../utils/constants.js';
+import { net } from '../entities/entities.js';
 
 export class Renderer {
     constructor(canvasId) {

@@ -1,10 +1,10 @@
-import { CANVAS_HEIGHT } from './constants.js';
+import { CANVAS_HEIGHT } from '../utils/constants.js';
 
 export class InputHandler {
-    constructor(canvas, userPaddle) {
+    constructor(canvas, userPaddle, game) {
         this.canvas = canvas;
         this.userPaddle = userPaddle;
-        this.gameState = 'MENU'; // Will be synced with Game class
+        this.game = game;
 
         this.initListeners();
     }
@@ -14,8 +14,8 @@ export class InputHandler {
     }
 
     getMousePos(evt) {
-        // We only control paddle if playing, but we don't check state here strictly
-        // The Game class will decide when to update physics
+        if (this.game.gameState !== 'PLAYING') return;
+
         let rect = this.canvas.getBoundingClientRect();
         let newY = evt.clientY - rect.top - this.userPaddle.height / 2;
 

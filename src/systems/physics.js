@@ -1,4 +1,4 @@
-import { CANVAS_HEIGHT, CANVAS_WIDTH } from './constants.js';
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from '../utils/constants.js';
 
 export function checkCollision(ball, paddle) {
     ball.top = ball.y - ball.radius;

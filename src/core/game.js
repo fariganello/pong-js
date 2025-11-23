@@ -1,10 +1,10 @@
-import { CANVAS_WIDTH, CANVAS_HEIGHT, COLORS, GAME_CONFIG, POWERUP_TYPES } from './constants.js';
-import { SoundManager } from './audio.js';
-import { Ball, Paddle, Powerup } from './entities.js';
-import { Renderer } from './renderer.js';
+import { CANVAS_WIDTH, CANVAS_HEIGHT, COLORS, GAME_CONFIG, POWERUP_TYPES } from '../utils/constants.js';
+import { SoundManager } from '../systems/audio.js';
+import { Ball, Paddle, Powerup } from '../entities/entities.js';
+import { Renderer } from '../systems/renderer.js';
 import { InputHandler } from './input.js';
-import { checkCollision, checkWallCollision, resolvePaddleCollision, checkPowerupCollision } from './physics.js';
-import { ParticleSystem } from './particles.js';
+import { checkCollision, checkWallCollision, resolvePaddleCollision, checkPowerupCollision } from '../systems/physics.js';
+import { ParticleSystem } from '../systems/particles.js';
 
 export class Game {
     constructor() {
@@ -18,7 +18,7 @@ export class Game {
         this.balls = [];
         this.powerup = new Powerup();
 
-        this.input = new InputHandler(this.renderer.canvas, this.user);
+        this.input = new InputHandler(this.renderer.canvas, this.user, this);
 
         this.gameState = 'MENU';
         this.winner = "";
